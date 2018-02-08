@@ -18,8 +18,9 @@ const instructions = Platform.select({
   android: 'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
-//创建ReactNative组件
-export default class App extends Component<{}> {
+
+type Props = {};
+export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
@@ -36,7 +37,7 @@ export default class App extends Component<{}> {
     );
   }
 }
-// StyleSheet.create 创建样式实例 在应用中只会被创建一次，不用每次在渲染周期中重新创建
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
